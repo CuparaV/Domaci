@@ -1,6 +1,8 @@
 package tests;
 
 
+import Utils.Constants;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.LoginPage;
@@ -16,7 +18,7 @@ public class LoginTest extends BaseTest{
 
     @Test
     public void loginUserTest(){
-        loginPage.loginUser();
+        loginPage.loginUser(Constants.EMAIL_FIELD, Constants.PASSWORD);
         loginPage.assertLogoutButtonIsDisplayed();
 
     }

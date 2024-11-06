@@ -21,10 +21,10 @@ public class LoginPage {
     private By logoutButton = By.cssSelector(".ico-logout");
 
 
-    public void loginUser() {
+    public void loginUser(String username, String password) {
         driver.findElement(loginLink).click();
-        driver.findElement(emailField).sendKeys("randomEmail1332123213@email.com");
-        driver.findElement(passwordField).sendKeys("Test1234");
+        driver.findElement(emailField).sendKeys(username);
+        driver.findElement(passwordField).sendKeys(password);
         driver.findElement(loginButton).click();
     }
 
